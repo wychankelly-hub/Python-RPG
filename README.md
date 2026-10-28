@@ -25,7 +25,7 @@
 
 用 **Google Chrome** 或 **Microsoft Edge** 打開遊戲網址（GitHub Pages）：
 
-**https://你的GitHub帳號.github.io/你的repo名稱/**
+**https://wychankelly-hub.github.io/Python-RPG/**
 
 > 老師：把 `index.html` 放在 GitHub repo 的根目錄，然後在 repo 的
 > **Settings → Pages** 選擇 `main` branch，就會得到上面格式的網址。
