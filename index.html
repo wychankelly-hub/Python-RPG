@@ -1074,7 +1074,7 @@ const CHAPTERS = [
         "id": "c1m3",
         "type": "write",
         "title": "先預測，再測試",
-        "goal": "先預測最後顯示甚麼，再寫出程式。",
+        "goal": "怪物開始有 30 HP，受傷後剩下 20 HP。用同一個變量 monster_hp 記住這個改變；先預測，再寫 3 行程式測試。",
         "xp": 30,
         "answer": "monster_hp = 30\nmonster_hp = 20\nprint(monster_hp)",
         "scene": {
@@ -1094,15 +1094,15 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "怪物開始有 30 HP：用 = 把 30 存入 monster_hp，讓程式記住開始的 HP。",
             "code": "monster_hp = 30"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "怪物受傷後剩下 20 HP：再次用 = 把 20 存入同一個 monster_hp，取代原本的 30。這次不用做減法。",
             "code": "monster_hp = 20"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "用 print(monster_hp) 顯示這個變量現在記住的 HP。括號內不要加引號，否則會顯示名稱文字。",
             "code": "print(monster_hp)"
           }
         ],
@@ -1141,13 +1141,13 @@ const CHAPTERS = [
         "success": [
           {
             "who": "wizard",
-            "text": "看看結果：變量讓程式記住、重用及改變目前的資料。"
+            "text": "第 1 行記住 30；第 2 行用 20 取代 30；第 3 行才顯示目前值，所以只顯示 20。重新賦值不會建立另一個 monster_hp。"
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 改變目前值；先讀右邊，縮排決定哪些行一起執行。",
-          "monster_hp = 30\nmonster_hp = ___\nprint(monster_hp)"
+          "這次一直使用同一個名字 monster_hp；它先記住開始的 HP，再記住受傷後的 HP。",
+          "第 1 行的 = 右邊填 30，第 2 行的 = 右邊填 20。兩行的左邊都寫 monster_hp。",
+          "monster_hp = ___  # 開始時有 30 HP\nmonster_hp = ___  # 受傷後剩下 20 HP\nprint(monster_hp)"
         ],
         "prediction": {
           "question": "30 被 20 取代後，print 會顯示甚麼？",
@@ -1159,7 +1159,7 @@ const CHAPTERS = [
           "answer": "20",
           "explain": "變量記住目前的值；新值取代舊值。"
         },
-        "scaffold": "monster_hp = 30\nmonster_hp = ___\nprint(monster_hp)"
+        "scaffold": "monster_hp = ___  # 開始時有 30 HP\nmonster_hp = ___  # 受傷後剩下 20 HP\nprint(monster_hp)"
       },
       {
         "id": "c1m4",
