@@ -6065,7 +6065,7 @@ async function boot() {
 }
 
 /* Teacher-owned endpoint; deploy Code.gs and paste its /exec URL here. */
-const TEACHER_CONFIG = { enabled: false, lesson: 1, appsScriptUrl: '' };
+const TEACHER_CONFIG = { enabled: false, lesson: 1, appsScriptUrl: 'https://script.google.com/macros/s/AKfycbwgyehnUI1uzVh7S4SZZ3ZrWX6XoxoGshR4bD5HeBxHbvVYoWHbDx_O4RbHdrKkz2Kg/exec' };
 const Classroom = {
   requested: new URLSearchParams(location.search).get('mode') === 'class',
   active: false, session: null,
