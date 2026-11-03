@@ -8,6 +8,7 @@ vm.createContext(context);vm.runInContext(fs.readFileSync(new URL('../Code.gs',i
 const lookup=code=>JSON.parse(JSON.stringify(context.lookupSession(rows,code)));
 let count=0;
 function check(name,fn){fn();count++;console.log('PASS '+name);}
+check('sessionList without arguments is safe and defaults are copied',()=>{assert.deepEqual(Array.from(context.sessionList()),[]);assert.deepEqual(Array.from(context.sessionList(' c2m1, ,c2m2 ')),['c2m1','c2m2']);const fallback=['c2m1'];const result=context.sessionList('',fallback);result.push('c2m2');assert.deepEqual(fallback,['c2m1']);});
 check('valid active session and configured required/bonus IDs',()=>{assert.deepEqual(lookup('DRAGON28'),{success:true,active:true,lesson:2,title:'數據類型與運算',required:['c2m1','c2m2','c2m3'],bonus:['c2b1']});});
 check('unknown and malformed session',()=>{for(const id of ['MISSING','', '<script>'])assert.equal(lookup(id).success,false);});
 check('inactive session',()=>{rows[1][5]=false;assert.equal(lookup('DRAGON28').active,false);rows[1][5]=true;});

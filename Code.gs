@@ -18,7 +18,7 @@ const VALID_MISSIONS = {
   4:['c4m1','c4m2','c4m3','c4b1'],
   5:['c5m1','c5m2','c5m3','c5m4','c5m5']
 };
-function sessionList(value, fallback) {
+function sessionList(value, fallback = []) {
   return String(value || '').trim() ? String(value).split(',').map(x => x.trim()).filter(Boolean) : fallback.slice();
 }
 function lookupSession(rows, code) {
