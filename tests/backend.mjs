@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const header=['Class','Session_Code','Lesson','Required_Missions','Bonus_Missions','Active'];
+let rows=[header,['3A','DRAGON28',2,'c2m1,c2m2,c2m3','c2b1',true]];
+const context={PropertiesService:{getScriptProperties:()=>({getProperty:()=> 'test-sheet'})},SpreadsheetApp:{openById:()=>({getSheetByName:name=>name==='Sessions'?{getDataRange:()=>({getValues:()=>rows})}:null})},ContentService:{MimeType:{JSON:'application/json'},createTextOutput:text=>({setMimeType:()=>JSON.parse(text)})}};
+vm.createContext(context);vm.runInContext(fs.readFileSync(new URL('../Code.gs',import.meta.url),'utf8'),context);
+const lookup=code=>JSON.parse(JSON.stringify(context.lookupSession(rows,code)));
+let count=0;
+function check(name,fn){fn();count++;console.log('PASS '+name);}
+check('valid active session and configured required/bonus IDs',()=>{assert.deepEqual(lookup('DRAGON28'),{success:true,active:true,lesson:2,title:'數據類型與運算',required:['c2m1','c2m2','c2m3'],bonus:['c2b1']});});
+check('unknown and malformed session',()=>{for(const id of ['MISSING','', '<script>'])assert.equal(lookup(id).success,false);});
+check('inactive session',()=>{rows[1][5]=false;assert.equal(lookup('DRAGON28').active,false);rows[1][5]=true;});
+check('duplicate session rejected',()=>{rows.push([...rows[1]]);assert.equal(lookup('DRAGON28').success,false);rows.pop();});
+check('cross-lesson and duplicate mission IDs rejected',()=>{for(const value of ['c3m1','c2m1,c2m1','unknown']){rows[1][3]=value;assert.equal(lookup('DRAGON28').success,false);}rows[1][3]='c2m1,c2m2,c2m3';});
+check('default required missions and explicitly blank bonus',()=>{rows[1][3]='';rows[1][4]='';assert.deepEqual(lookup('DRAGON28').required,['c2m1','c2m2','c2m3']);assert.deepEqual(lookup('DRAGON28').bonus,[]);});
+check('invalid lesson and missing column rejected',()=>{rows[1][2]=6;assert.equal(lookup('DRAGON28').success,false);rows[1][2]=2;rows[0]=header.slice(0,5);assert.equal(lookup('DRAGON28').success,false);rows[0]=header;});
+check('doGet emits JSON and no class/student identity',()=>{const result=context.doGet({parameter:{session:'DRAGON28'}});assert(result.success);assert.equal(result.class,undefined);assert.equal(result.name,undefined);});
+check('one-time configuration records spreadsheet ID for deployed web app',()=>{let saved;context.SpreadsheetApp.getActiveSpreadsheet=()=>({getId:()=> 'configured-sheet',getSheetByName:()=>({})});context.PropertiesService.getScriptProperties=()=>({setProperty:(key,value)=>{saved={key,value};},getProperty:()=>saved?.value});context.configureClassroom();assert.deepEqual(saved,{key:'SPREADSHEET_ID',value:'configured-sheet'});assert(context.doGet({parameter:{session:'DRAGON28'}}).success);});
+check('missing spreadsheet configuration fails closed',()=>{context.PropertiesService.getScriptProperties=()=>({getProperty:()=>null});assert.equal(context.doGet({parameter:{session:'DRAGON28'}}).success,false);context.PropertiesService.getScriptProperties=()=>({getProperty:()=> 'test-sheet'});});
+check('spreadsheet failure fails closed without error details',()=>{context.SpreadsheetApp.openById=()=>{throw Error('private sheet details');};assert.deepEqual(JSON.parse(JSON.stringify(context.doGet({parameter:{session:'DRAGON28'}}))),{success:false,active:false});});
+console.log(`PASS ${count} backend groups (mock SpreadsheetApp; not deployed)`);
