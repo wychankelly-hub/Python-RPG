@@ -968,7 +968,7 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先想想資料要怎樣改變，再寫出程式。",
+            "text": "用 print 顯示文字 Hello；文字要放在一對英文引號內，print 後要有括號。",
             "code": "print(\"Hello\")"
           }
         ],
@@ -987,9 +987,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 變量的目前值與數據類型；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "這次只顯示一句文字，不需要建立變量。",
+          "Hello 是文字，要放在一對英文引號內，再放進 print 的括號。",
+          "局部骨架：print(\"___\")；空位填 Hello。"
         ],
         "code": "print(\"Hello\")"
       },
@@ -1017,11 +1017,11 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "建立變量 monster_hp，用 = 把數字 30 存入它，記住怪物開始的 HP。",
             "code": "monster_hp = 30"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "用 print 顯示 monster_hp 記住的數字；變量名稱不要加引號。",
             "code": "print(monster_hp)"
           }
         ],
@@ -1065,9 +1065,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 變量、print；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：print(目前值)"
+          "monster_hp 是名字，30 才是要記住的數字。",
+          "第一行用 = 存入 30；第二行 print 的括號內放 monster_hp，不加引號。",
+          "局部骨架：monster_hp = ___\nprint(monster_hp)；空位填開始的 HP 30。"
         ]
       },
       {
@@ -1165,7 +1165,7 @@ const CHAPTERS = [
         "id": "c1m4",
         "type": "write",
         "title": "先讀右邊，再存回左邊",
-        "goal": "用 attack = 10，把 HP 由 30 減到 20。",
+        "goal": "怪物開始有 30 HP，attack 是 10。用變量計算一次攻擊後的 HP，再顯示結果。",
         "xp": 30,
         "answer": "monster_hp = 30\nattack = 10\nmonster_hp = monster_hp - attack\nprint(monster_hp)",
         "scene": {
@@ -1189,19 +1189,19 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "怪物開始有 30 HP：把 30 存入 monster_hp。",
             "code": "monster_hp = 30"
           },
           {
-            "text": "先算右邊，再把結果存入 attack。",
+            "text": "每次攻擊扣 10 HP：把 10 存入 attack。",
             "code": "attack = 10"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "用 monster_hp 目前的 HP 減去 attack，再把計算結果存回 monster_hp；不要直接把答案 20 寫進去。",
             "code": "monster_hp = monster_hp - attack"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "用 print 顯示更新後的 monster_hp，檢查這次攻擊後還剩多少 HP。",
             "code": "print(monster_hp)"
           }
         ],
@@ -1230,9 +1230,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 用目前值計算並存回；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：monster_hp = monster_hp - ___"
+          "attack 記住每次要扣多少 HP；monster_hp 記住目前還剩多少。",
+          "先記住 HP 30 和 attack 10，再用目前 HP 減去 attack，存回同一個 monster_hp。",
+          "更新那行的骨架：monster_hp = monster_hp - ___；空位使用變量 attack。最後 print(monster_hp)。"
         ],
         "visual": {
           "type": "variable-update",
@@ -1270,19 +1270,19 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "建立 monster_hp，記住怪物開始的 HP 是 40。",
             "code": "monster_hp = 40"
           },
           {
-            "text": "先算右邊，再把結果存入 attack。",
+            "text": "建立 attack，記住這次攻擊力是 15。",
             "code": "attack = 15"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "用目前的 monster_hp 減去 attack，把結果存回同一個 monster_hp。",
             "code": "monster_hp = monster_hp - attack"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "用 print 顯示更新後的 monster_hp；這次只顯示一次。",
             "code": "print(monster_hp)"
           }
         ],
@@ -1315,9 +1315,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 用目前值計算並存回；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：monster_hp = monster_hp - ___"
+          "要重用 attack 記住的攻擊力，而不是直接把最後答案 25 存入 HP。",
+          "先分別把 40、15 存入 monster_hp、attack；計算時用這兩個變量相減。",
+          "更新那行：monster_hp = monster_hp - ___；空位填攻擊力的變量名稱，再用 print 顯示目前 HP。"
         ],
         "badge": {
           "id": "lesson1",
@@ -1354,23 +1354,23 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "把開始的 HP 40 存入 monster_hp。",
             "code": "monster_hp = 40"
           },
           {
-            "text": "先算右邊，再把結果存入 attack。",
+            "text": "把每次攻擊力 7 存入 attack。",
             "code": "attack = 7"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "第一次攻擊：用目前 monster_hp 減去 attack，再存回 monster_hp。",
             "code": "monster_hp = monster_hp - attack"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "第二次攻擊：再次用已更新的 monster_hp 減去 attack，再存回 monster_hp；不要重新設成 40。",
             "code": "monster_hp = monster_hp - attack"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "兩次攻擊後才用 print 顯示目前 monster_hp。",
             "code": "print(monster_hp)"
           }
         ],
@@ -1399,9 +1399,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 用目前值計算並存回；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：monster_hp = monster_hp - ___"
+          "第二次攻擊應從第一次攻擊後的 HP 開始。",
+          "初始化 HP 40 只寫一次；更新 HP 的減法要寫兩次，最後才 print。",
+          "把 monster_hp = monster_hp - attack 連續寫兩行；不要在兩次攻擊中間重設 monster_hp。"
         ],
         "bonus": true
       }
@@ -1487,15 +1487,15 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_name。",
+            "text": "把怪物名稱 Dragon 存入 monster_name；這是文字，選有引號的字串。",
             "code": "monster_name = \"Dragon\""
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "把 HP 30 存入 monster_hp；這是整數，不加引號或小數點。",
             "code": "monster_hp = 30"
           },
           {
-            "text": "先算右邊，再把結果存入 speed。",
+            "text": "把速度 2.5 存入 speed；這是浮點數，保留小數點，不加引號。",
             "code": "speed = 2.5"
           }
         ],
@@ -1528,9 +1528,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 變量的目前值與數據類型；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "引號決定是不是文字；2.5 與 \"2.5\" 的類型不同。",
+          "monster_name 要 str；monster_hp 要 int；speed 要 float。",
+          "名稱選 \"Dragon\"，速度選沒有引號的 2.5；HP 保留整數 30。"
         ],
         "visual": {
           "type": "datatype-sort",
@@ -1613,8 +1613,16 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先想想資料要怎樣改變，再寫出程式。",
-            "code": "monster_hp = 30\nattack = 10\nprint(monster_hp - attack)"
+            "text": "檢查 monster_hp 的初始值：計算需要整數 30，不是字串 \"30\"。",
+            "code": "monster_hp = 30"
+          },
+          {
+            "text": "保留 attack 的數字 10。",
+            "code": "attack = 10"
+          },
+          {
+            "text": "保留 print 中的減法，讓 monster_hp 減去 attack 後顯示結果。",
+            "code": "print(monster_hp - attack)"
           }
         ],
         "checks": [
@@ -1637,9 +1645,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 變量的目前值與數據類型；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "錯誤來自資料類型：str 不能直接減 int。",
+          "檢查第 1 行：monster_hp 現在存的是 \"30\"，引號讓它變成字串。",
+          "把第 1 行改成 monster_hp = 30；其他兩行保留，再施法。"
         ],
         "code": "monster_hp = \"30\"\nattack = 10\nprint(monster_hp - attack)",
         "hint": "引號使 \"30\" 變成 str。要計算的是整數。",
@@ -1658,7 +1666,7 @@ const CHAPTERS = [
         "id": "c2m3",
         "type": "write",
         "title": "補給與雙倍攻擊",
-        "goal": "HP 30，attack 5；用 * 計算雙倍傷害，更新 HP；用 + 讓 gold 由 10 增加 3；用 / 計算 speed = 5 / 2。",
+        "goal": "記住 HP 30、attack 5；算雙倍傷害並扣 HP。另計算 gold = 10 + 3、speed = 5 / 2。最後只顯示目前 HP。",
         "xp": 30,
         "answer": "monster_hp = 30\nattack = 5\ndamage = attack * 2\nmonster_hp = monster_hp - damage\ngold = 10 + 3\nspeed = 5 / 2\nprint(monster_hp)",
         "scene": {
@@ -1694,31 +1702,31 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "把怪物開始的 HP 30 存入 monster_hp。",
             "code": "monster_hp = 30"
           },
           {
-            "text": "先算右邊，再把結果存入 attack。",
+            "text": "把基本攻擊力 5 存入 attack。",
             "code": "attack = 5"
           },
           {
-            "text": "先算右邊，再把結果存入 damage。",
+            "text": "這次傷害是雙倍攻擊力：用 attack 乘 2，把結果存入 damage。",
             "code": "damage = attack * 2"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "用目前 monster_hp 減去 damage，把剩餘 HP 存回 monster_hp。",
             "code": "monster_hp = monster_hp - damage"
           },
           {
-            "text": "先算右邊，再把結果存入 gold。",
+            "text": "原有 10 枚金幣，獲得 3 枚：用 10 加 3，把結果存入 gold。",
             "code": "gold = 10 + 3"
           },
           {
-            "text": "先算右邊，再把結果存入 speed。",
+            "text": "路程是 5，時間是 2：用 5 除以 2，把速度存入 speed；使用 /。",
             "code": "speed = 5 / 2"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "最後用 print 顯示更新後的 monster_hp；本任務不用顯示 gold 或 speed。",
             "code": "print(monster_hp)"
           }
         ],
@@ -1757,9 +1765,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 +、-、*、/；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "attack 是基本攻擊力，damage 是這次雙倍攻擊造成的傷害，兩者用途不同。",
+          "用 * 算 damage，再用 - 更新 HP；gold 使用 10 + 3，speed 使用 5 / 2。",
+          "傷害骨架：damage = attack * ___（兩倍）。HP 骨架：monster_hp = monster_hp - damage。最後只 print HP。"
         ],
         "badge": {
           "id": "lesson2",
@@ -1800,19 +1808,19 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 gold。",
+            "text": "把擁有的金幣 100 存入 gold。",
             "code": "gold = 100"
           },
           {
-            "text": "先算右邊，再把結果存入 price。",
+            "text": "把每件商品的價錢 30 存入 price。",
             "code": "price = 30"
           },
           {
-            "text": "先算右邊，再把結果存入 count。",
+            "text": "用 gold 整除 price（//），把可買的完整件數存入 count。",
             "code": "count = gold // price"
           },
           {
-            "text": "先算右邊，再把結果存入 change。",
+            "text": "用 gold 除以 price 的餘數（%），把買完後剩下的金幣存入 change；這題不用 print。",
             "code": "change = gold % price"
           }
         ],
@@ -1841,9 +1849,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 //、%；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "可買的件數要是完整件數；剩餘金幣不是小數部分。",
+          "count 用 gold // price；change 用 gold % price。",
+          "先記住 gold 100、price 30，再分別計算 count = gold // ___ 和 change = gold % ___；兩個空位都用 price。"
         ],
         "bonus": true
       }
@@ -1914,11 +1922,11 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "用 input 取得字串，存入 player。",
+            "text": "用 input 顯示提示文字 \"Name: \"，等待玩家輸入名字，把取得的字串存入 player。",
             "code": "player = input(\"Name: \")"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "用 print 顯示 player 記住的名字。施法後在輸入框輸入任何名字，再按確定。",
             "code": "print(player)"
           }
         ],
@@ -1948,9 +1956,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 input；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "input 等待玩家輸入，player 記住輸入後取得的字串。",
+          "把提示文字 \"Name: \" 放進 input 的括號；把 input 的結果存入 player。",
+          "輸入行骨架：player = input(\"Name: \")。下一行用 print 顯示 player，不要把 player 加引號。"
         ],
         "visual": {
           "type": "input-flow",
@@ -1995,8 +2003,16 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先想想資料要怎樣改變，再寫出程式。",
-            "code": "damage = int(input(\"Damage: \"))\nmonster_hp = 30 - damage\nprint(monster_hp)"
+            "text": "修正取得 damage 的行：把 input 得到的字串交給 int 轉成整數，再存入 damage。",
+            "code": "damage = int(input(\"Damage: \"))"
+          },
+          {
+            "text": "保留計算：用開始的 HP 30 減去 damage，把剩餘 HP 存入 monster_hp。",
+            "code": "monster_hp = 30 - damage"
+          },
+          {
+            "text": "用 print 顯示 monster_hp。再次施法時輸入 5，檢查是否顯示 25。",
+            "code": "print(monster_hp)"
           }
         ],
         "checks": [
@@ -2030,9 +2046,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 input、int 轉換；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "即使在輸入框打 5，input 得到的仍是字串 \"5\"。",
+          "第 1 行需要 int() 包住 input(...)；不是把 int 放在提示文字裏。",
+          "修正第 1 行：damage = int(input(\"Damage: \"))。重新施法時輸入 5。"
         ],
         "code": "damage = input(\"Damage: \")\nmonster_hp = 30 - damage\nprint(monster_hp)",
         "hint": "input() 得到 \"5\" (str)，int() 才把它轉成 5 (int)。",
@@ -2047,7 +2063,7 @@ const CHAPTERS = [
         "id": "c3m3",
         "type": "write",
         "title": "條件只選一條路",
-        "goal": "輸入 30。用 if / else 判斷 HP <= 0，顯示 You win!；否則 Keep fighting!。",
+        "goal": "怪物開始有 30 HP。取得並轉換 attack；測試時輸入 30。扣 HP 後，若 monster_hp <= 0 顯示 You win!，否則顯示 Keep fighting!。",
         "xp": 30,
         "answer": "attack = int(input(\"Attack power: \"))\nmonster_hp = 30 - attack\nif monster_hp <= 0:\n    print(\"You win!\")\nelse:\n    print(\"Keep fighting!\")",
         "scene": {
@@ -2087,27 +2103,27 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "用 input 顯示 \"Attack power: \"，用 int 把輸入轉成整數，存入 attack；施法時輸入 30。",
             "code": "attack = int(input(\"Attack power: \"))"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "怪物開始有 30 HP：用 30 減去 attack，把剩餘 HP 存入 monster_hp。",
             "code": "monster_hp = 30 - attack"
           },
           {
-            "text": "比較目前狀態，決定執行哪個分支。",
+            "text": "用 if 檢查 monster_hp 是否小於或等於 0（<=）；行尾加冒號。",
             "code": "if monster_hp <= 0:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "如果條件成立，顯示文字 \"You win!\"；這行在 if 裏，開頭縮排 4 格。",
             "code": "    print(\"You win!\")"
           },
           {
-            "text": "否則執行另一個分支。",
+            "text": "用 else 表示 HP 仍大於 0 的情況；和 if 對齊，行尾加冒號。",
             "code": "else:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "在 else 裏顯示文字 \"Keep fighting!\"；開頭縮排 4 格。",
             "code": "    print(\"Keep fighting!\")"
           }
         ],
@@ -2174,9 +2190,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 input、int 轉換、if、else、比較條件；先讀右邊，縮排決定哪些行一起執行。",
-          "attack = int(input(\"Attack power: \"))\nmonster_hp = 30 - attack\nif ___:\n    print(\"You win!\")\nelse:\n    print(\"Keep fighting!\")"
+          "先扣 HP，再判斷扣完後的 monster_hp；不要用攻擊前的值作決定。",
+          "條件是 monster_hp <= 0；if 與 else 對齊，各自的 print 縮排 4 格。",
+          "分支骨架：\nif monster_hp <= 0:\n    print(\"You win!\")\nelse:\n    print(\"Keep fighting!\")"
         ],
         "visual": {
           "type": "condition-branch",
@@ -2242,35 +2258,35 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "取得玩家輸入，用 int 轉成整數存入 attack；測試時輸入 10。",
             "code": "attack = int(input(\"Attack: \"))"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "用開始的 HP 30 減去 attack，把結果存入 monster_hp。",
             "code": "monster_hp = 30 - attack"
           },
           {
-            "text": "比較目前狀態，決定執行哪個分支。",
+            "text": "先用 if 檢查 monster_hp <= 0；行尾加冒號。",
             "code": "if monster_hp <= 0:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "HP <= 0 時顯示 \"Win\"；縮排 4 格。",
             "code": "    print(\"Win\")"
           },
           {
-            "text": "先算右邊，再把結果存入 elif monster_hp < 25:。",
+            "text": "若第一個條件不成立，用 elif 再檢查 monster_hp < 25；與 if 對齊，行尾加冒號。",
             "code": "elif monster_hp < 25:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "第二個條件成立時顯示 \"Hurt\"；縮排 4 格。",
             "code": "    print(\"Hurt\")"
           },
           {
-            "text": "否則執行另一個分支。",
+            "text": "用 else 表示上述兩個條件都不成立；與 if 對齊，行尾加冒號。",
             "code": "else:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "在 else 裏顯示 \"Safe\"；縮排 4 格。",
             "code": "    print(\"Safe\")"
           }
         ],
@@ -2297,9 +2313,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 if、elif（選修）、else；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "條件由上而下檢查；前一個成立後，不再執行後面的分支。",
+          "先判斷 <= 0，再用 elif 判斷 < 25，最後 else 處理其餘 HP；三個關鍵字對齊。",
+          "分支標題依次是 if monster_hp <= 0:、elif monster_hp < 25:、else:。每個 print 縮排 4 格，訊息依次是 Win、Hurt、Safe。"
         ],
         "bonus": true
       }
@@ -2351,7 +2367,7 @@ const CHAPTERS = [
         "id": "c4m1",
         "type": "write",
         "title": "檢查 → 執行 → 更新 → 再檢查",
-        "goal": "用 while 每次扣 10，顯示 20、10、0。",
+        "goal": "怪物開始有 30 HP。用 while 在 HP > 0 時每次扣 10，每回合顯示更新後 HP，直到停止。",
         "xp": 30,
         "answer": "monster_hp = 30\nwhile monster_hp > 0:\n    monster_hp = monster_hp - 10\n    print(monster_hp)",
         "scene": {
@@ -2375,19 +2391,19 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "把怪物開始的 HP 30 存入 monster_hp；這行在迴圈外，只執行一次。",
             "code": "monster_hp = 30"
           },
           {
-            "text": "檢查停止條件；成立時重複下面縮排的程式。",
+            "text": "用 while 檢查 monster_hp > 0；成立時繼續攻擊，行尾加冒號。",
             "code": "while monster_hp > 0:"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "在 while 裏，用目前 monster_hp 減 10，再存回 monster_hp；縮排 4 格。",
             "code": "    monster_hp = monster_hp - 10"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "仍在 while 裏，用 print 顯示本次更新後的 monster_hp；縮排 4 格，所以每回合都會顯示。",
             "code": "    print(monster_hp)"
           }
         ],
@@ -2419,9 +2435,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 while、在迴圈內更新條件的變量；先讀右邊，縮排決定哪些行一起執行。",
-          "monster_hp = 30\nwhile ___:\n    monster_hp = monster_hp - 10\n    print(monster_hp)"
+          "每次攻擊都要改變 monster_hp，while 才可能停下來。",
+          "while 的條件是 monster_hp > 0；更新 HP 和 print 都要縮排 4 格。",
+          "迴圈骨架：\nwhile monster_hp > 0:\n    monster_hp = monster_hp - ___\n    print(monster_hp)\n空位填每次扣掉的 HP 10。"
         ],
         "visual": {
           "type": "loop-cycle",
@@ -2464,8 +2480,20 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先想想資料要怎樣改變，再寫出程式。",
-            "code": "monster_hp = 30\nwhile monster_hp > 0:\n    print(\"Attack!\")\n    monster_hp = monster_hp - 10"
+            "text": "保留 monster_hp 的初始值 30，放在迴圈外。",
+            "code": "monster_hp = 30"
+          },
+          {
+            "text": "保留 while 的 monster_hp > 0 條件與冒號。",
+            "code": "while monster_hp > 0:"
+          },
+          {
+            "text": "保留迴圈裏顯示 \"Attack!\" 的行，開頭有 4 格空白。",
+            "code": "    print(\"Attack!\")"
+          },
+          {
+            "text": "把更新 monster_hp 的行也縮排 4 格，放進同一個 while；每回合都減 10 才能停止。",
+            "code": "    monster_hp = monster_hp - 10"
           }
         ],
         "checks": [
@@ -2495,9 +2523,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 在迴圈內更新條件的變量；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "看看迴圈重複執行的範圍：目前只有 print，HP 一直沒有變。",
+          "更新 monster_hp 的最後一行在迴圈外，所以程式到不了那行。",
+          "把最後一行開頭加 4 格空白，與 print(\"Attack!\") 對齊，讓兩行都在 while 裏。"
         ],
         "code": "monster_hp = 30\nwhile monster_hp > 0:\n    print(\"Attack!\")\nmonster_hp = monster_hp - 10",
         "hint": "檢查 monster_hp 更新那行的縮排：每次重複都要改變目前 HP。",
@@ -2517,7 +2545,7 @@ const CHAPTERS = [
         "id": "c4m3",
         "type": "write",
         "title": "自己控制停止條件",
-        "goal": "HP 24；每次減 attack 8，counter 記住攻擊次數，最後顯示 3。",
+        "goal": "怪物開始有 24 HP，attack 是 8。用 while 每回合扣 HP，並讓 counter 由 0 起每次加 1；停止後只顯示總攻擊次數。",
         "xp": 30,
         "answer": "monster_hp = 24\nattack = 8\ncounter = 0\nwhile monster_hp > 0:\n    monster_hp = monster_hp - attack\n    counter = counter + 1\nprint(counter)",
         "scene": {
@@ -2549,31 +2577,31 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "把怪物開始的 HP 24 存入 monster_hp。",
             "code": "monster_hp = 24"
           },
           {
-            "text": "先算右邊，再把結果存入 attack。",
+            "text": "把每次攻擊力 8 存入 attack。",
             "code": "attack = 8"
           },
           {
-            "text": "先算右邊，再把結果存入 counter。",
+            "text": "還未攻擊過：把 0 存入 counter，記錄攻擊次數。",
             "code": "counter = 0"
           },
           {
-            "text": "檢查停止條件；成立時重複下面縮排的程式。",
+            "text": "用 while 檢查 monster_hp > 0，行尾加冒號。",
             "code": "while monster_hp > 0:"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "在迴圈裏，用目前 monster_hp 減去 attack，再存回 monster_hp；縮排 4 格。",
             "code": "    monster_hp = monster_hp - attack"
           },
           {
-            "text": "先算右邊，再把結果存入 counter。",
+            "text": "仍在迴圈裏，把目前 counter 加 1，再存回 counter，記住多攻擊了一次；縮排 4 格。",
             "code": "    counter = counter + 1"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "迴圈結束後才用 print 顯示 counter；這行不要縮排，所以只顯示總次數一次。",
             "code": "print(counter)"
           }
         ],
@@ -2607,9 +2635,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 while、在迴圈內更新條件的變量；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "counter 記住已攻擊的次數，所以開始是 0，每攻擊一次加 1。",
+          "while 裏要有兩個更新：HP 減 attack，以及 counter 加 1；最後的 print 放在 while 外。",
+          "迴圈內兩行都縮排 4 格：\nmonster_hp = monster_hp - attack\ncounter = counter + 1\nprint(counter) 不縮排，只顯示總次數。"
         ],
         "badge": {
           "id": "lesson4",
@@ -2658,23 +2686,23 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "把開始的 HP 35 存入 monster_hp；放在迴圈外。",
             "code": "monster_hp = 35"
           },
           {
-            "text": "檢查停止條件；成立時重複下面縮排的程式。",
+            "text": "用 while 檢查 monster_hp > 0，行尾加冒號。",
             "code": "while monster_hp > 0:"
           },
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "在迴圈裏用 input 取得每回合的攻擊力，用 int 轉成整數後存入 attack；縮排 4 格，每次測試都輸入 10。",
             "code": "    attack = int(input(\"Attack: \"))"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "仍在迴圈裏，用目前 monster_hp 減去 attack，再存回 monster_hp；縮排 4 格。",
             "code": "    monster_hp = monster_hp - attack"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "離開迴圈後才用 print 顯示 monster_hp；不要縮排，最後只顯示一次。",
             "code": "print(monster_hp)"
           }
         ],
@@ -2706,9 +2734,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 while、input、int 轉換、在迴圈內更新條件的變量；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "每個回合都要重新取得輸入，所以 input 那行要放在 while 裏。",
+          "輸入行和 HP 更新行都縮排 4 格；最後顯示 HP 的 print 不縮排。",
+          "輸入行：attack = int(input(\"Attack: \"))。更新行：monster_hp = monster_hp - attack。兩行都在 while monster_hp > 0: 裏。"
         ],
         "bonus": true
       }
@@ -2775,7 +2803,7 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "建立 monster_hp，用 = 存入魔王開始的 HP 50。這一步只準備狀態，還不用 input 或 print。",
             "code": "monster_hp = 50"
           }
         ],
@@ -2793,9 +2821,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 變量的目前值與數據類型；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "先讓程式記住魔王目前的 HP，之後才加入攻擊。",
+          "變量名稱是 monster_hp；右邊的開始值是 50。",
+          "局部骨架：monster_hp = ___；空位填 50，這一步不用 print。"
         ],
         "visual": {
           "type": "program-flow",
@@ -2840,11 +2868,11 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【保留】已有的 monster_hp = 50；它記住魔王開始的 HP，不用再寫第二次。",
             "code": "monster_hp = 50"
           },
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "【新增】在下一行用 input 顯示 \"Attack power: \"，用 int 轉成整數後存入 attack。施法時輸入 25；這一步不用 print。",
             "code": "attack = int(input(\"Attack power: \"))"
           }
         ],
@@ -2873,9 +2901,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 input、int 轉換；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：變量名稱 = 右邊的值或計算"
+          "魔王的初始 HP 已經在編輯器；這一步只加玩家輸入。",
+          "保留第一行 50 HP，在下一行取得 attack；input 的結果要經 int 轉換。",
+          "新增一行的骨架：attack = int(input(\"Attack power: \"))。施法後輸入 25，再按確定。"
         ],
         "carry": true
       },
@@ -2883,7 +2911,7 @@ const CHAPTERS = [
         "id": "c5m3",
         "type": "write",
         "title": "更新戰鬥狀態",
-        "goal": "保留之前程式，加入用 attack 更新 HP，顯示 25。",
+        "goal": "保留之前的初始 HP 和輸入程式。加入用 attack 更新 HP 的計算，再顯示目前 HP；測試時輸入 25。",
         "xp": 30,
         "answer": "monster_hp = 50\nattack = int(input(\"Attack power: \"))\nmonster_hp = monster_hp - attack\nprint(monster_hp)",
         "scene": {
@@ -2915,19 +2943,19 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【保留】開始時的 monster_hp = 50，不要在攻擊後再次重設 HP。",
             "code": "monster_hp = 50"
           },
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "【保留】取得並轉換 attack 的輸入行；這次施法仍輸入 25。",
             "code": "attack = int(input(\"Attack power: \"))"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【新增】用目前 monster_hp 減去 attack，再把剩餘 HP 存回 monster_hp。",
             "code": "monster_hp = monster_hp - attack"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "【新增】用 print 顯示更新後的 monster_hp；確認目前 HP 是 25。",
             "code": "print(monster_hp)"
           }
         ],
@@ -2958,9 +2986,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 用目前值計算並存回、input、int 轉換；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：monster_hp = monster_hp - ___"
+          "在已有輸入程式下面加入一次攻擊；這步還沒有迴圈。",
+          "保留前兩行；新增 HP 減去 attack 的更新，再新增顯示目前 HP 的 print。",
+          "新增兩行：\nmonster_hp = monster_hp - attack\nprint(monster_hp)\n這次施法仍輸入 25。"
         ],
         "carry": true
       },
@@ -3008,31 +3036,31 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【保留】monster_hp = 50 這個開始狀態，只在程式開始設定一次。",
             "code": "monster_hp = 50"
           },
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "【保留】用 input、int 取得 attack 的行；施法時輸入 25。",
             "code": "attack = int(input(\"Attack power: \"))"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【保留】用 monster_hp 減去 attack，並存回 monster_hp 的計算行。",
             "code": "monster_hp = monster_hp - attack"
           },
           {
-            "text": "比較目前狀態，決定執行哪個分支。",
+            "text": "【改寫】移除原本最後的 print(monster_hp)，改用 if 檢查 monster_hp <= 0；行尾加冒號。",
             "code": "if monster_hp <= 0:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "【新增】在 if 裏顯示 \"You win!\"；縮排 4 格。",
             "code": "    print(\"You win!\")"
           },
           {
-            "text": "否則執行另一個分支。",
+            "text": "【新增】用 else 表示魔王仍有 HP；與 if 對齊，行尾加冒號。",
             "code": "else:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "【新增】在 else 裏用同一個 print 顯示文字 \"Monster HP:\" 和變量 monster_hp，中間用逗號分隔；縮排 4 格。",
             "code": "    print(\"Monster HP:\", monster_hp)"
           }
         ],
@@ -3061,9 +3089,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 input、int 轉換、用目前值計算並存回、if、else；先讀右邊，縮排決定哪些行一起執行。",
-          "局部骨架：monster_hp = monster_hp - ___"
+          "要根據扣完後的 HP 選一句訊息，不能把舊的 print 和新分支全部保留。",
+          "保留前三行；刪掉原本最後的 print(monster_hp)，以 if / else 取代。",
+          "if 檢查 monster_hp <= 0；else 的顯示行是 print(\"Monster HP:\", monster_hp)。兩個分支的 print 都縮排 4 格。"
         ],
         "carry": true,
         "carryEdit": true
@@ -3116,35 +3144,35 @@ const CHAPTERS = [
         ],
         "plan": [
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【保留】把開始 HP 50 存入 monster_hp；這行留在迴圈外，否則每回合會重設 HP。",
             "code": "monster_hp = 50"
           },
           {
-            "text": "檢查停止條件；成立時重複下面縮排的程式。",
+            "text": "【新增】在初始 HP 之後加入 while，條件是 monster_hp > 0；行尾加冒號。",
             "code": "while monster_hp > 0:"
           },
           {
-            "text": "把輸入轉成整數，記住在 attack。",
+            "text": "【移入迴圈】取得並轉換 attack 的輸入行，改為縮排 4 格；每次出現輸入框都輸入 25。",
             "code": "    attack = int(input(\"Attack power: \"))"
           },
           {
-            "text": "先算右邊，再把結果存入 monster_hp。",
+            "text": "【移入迴圈】用目前 monster_hp 減去 attack 並存回 monster_hp 的行，改為縮排 4 格。",
             "code": "    monster_hp = monster_hp - attack"
           },
           {
-            "text": "比較目前狀態，決定執行哪個分支。",
+            "text": "【移入迴圈】if monster_hp <= 0 的行也縮排 4 格，讓每次攻擊後都判斷是否勝利。",
             "code": "    if monster_hp <= 0:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "【分支內】顯示 \"You win!\" 的行要縮排 8 格：同時位於 while 和 if 裏。",
             "code": "        print(\"You win!\")"
           },
           {
-            "text": "否則執行另一個分支。",
+            "text": "【移入迴圈】else 與 if 對齊，同樣縮排 4 格。",
             "code": "    else:"
           },
           {
-            "text": "顯示目前的值或所選訊息。",
+            "text": "【分支內】顯示 \"Monster HP:\" 和 monster_hp 的行縮排 8 格；用逗號分隔文字與變量。",
             "code": "        print(\"Monster HP:\", monster_hp)"
           }
         ],
@@ -3180,9 +3208,9 @@ const CHAPTERS = [
           }
         ],
         "hints": [
-          "想想這次要記住甚麼，以及哪個值會改變。",
-          "留意 input、int 轉換、用目前值計算並存回、if、else、while、在迴圈內更新條件的變量；先讀右邊，縮排決定哪些行一起執行。",
-          "monster_hp = 50\nwhile monster_hp > 0:\n    # 把輸入、計算、if / else 放在這裏；分支再縮排 4 格"
+          "開始的 HP 50 只設定一次；每回合重複的是輸入、扣 HP 和判斷。",
+          "在第一行之後加入 while monster_hp > 0:；把後面的行整體向右移 4 格，保留分支原有的額外縮排。",
+          "縮排檢查：初始 HP 是 0 格；while 標題是 0 格；input、更新 HP、if、else 是 4 格；兩個分支的 print 是 8 格。每次輸入 25。"
         ],
         "carry": true,
         "visual": {
@@ -3371,6 +3399,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "你創造了第一個函數！<code>def</code> 建立咒語，<code>hello()</code> 使用咒語。"
           }
+        ],
+        "hints": [
+          "def 只是定義函數，程式還未執行函數裏的 print。",
+          "hello 的括號是空的；函數內的 print 縮排 4 格，呼叫 hello() 不縮排。",
+          "先保留 def hello(): 和縮排的 print，最後另寫 hello() 才會執行。"
         ]
       },
       {
@@ -3478,6 +3511,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "只寫了一次咒語，就用了兩次！想用多少次都可以。"
           }
+        ],
+        "hints": [
+          "定義一次 battle_cry，再呼叫兩次；不用把函數定義重複寫。",
+          "函數裏的兩個 print 都縮排 4 格；最後兩個 battle_cry() 都不縮排。",
+          "最後兩行各寫一次 battle_cry()；每次呼叫都會顯示函數內的兩句文字。"
         ]
       },
       {
@@ -3587,6 +3625,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "看看戰鬥畫面下面：<b>⚔️ 攻擊</b>按鈕現在使用的，就是<b>你寫的</b> attack()！它會做 <code>monster_hp = attack(monster_hp)</code>。之後按一下試試！"
           }
+        ],
+        "hints": [
+          "hp 是傳入的目前 HP，return 才把扣血後的新值交回呼叫位置。",
+          "函數內回傳 hp - 10；在函數外用 attack(30) 測試。",
+          "只有 return hp - 10 那行縮排 4 格；print(attack(30)) 不縮排。"
         ]
       },
       {
@@ -3714,6 +3757,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "<b>💊 補血</b>按鈕也出現了，它會做 <code>hero_hp = heal(hero_hp)</code>。"
           }
+        ],
+        "hints": [
+          "補血是增加 HP，所以 return 裏使用加號。",
+          "把所選補血數值加到參數 hp；不要把 hp 固定寫成 50。",
+          "函數內的骨架是 return hp + ___；填你從字詞庫選的補血值，函數外用 heal(50) 測試。"
         ]
       },
       {
@@ -3740,15 +3788,15 @@ const CHAPTERS = [
         "goal": "跟著計劃自己寫 3 行咒語：fire_ball() 會令 HP 減 25。",
         "plan": [
           {
-            "text": "定義 (def) 函數 fire_ball，參數是 hp（最後要有冒號 :）",
+            "text": "用 def 定義 fire_ball 函數，參數叫 hp，行尾加冒號；hp 代表傳入的目前 HP。",
             "code": "def fire_ball(hp):"
           },
           {
-            "text": "（縮排）傳回 (return) hp 減 25",
+            "text": "在函數裏用 return 傳回 hp 減 25 的結果；縮排 4 格，這行不是 print。",
             "code": "    return hp - 25"
           },
           {
-            "text": "（不用縮排）顯示 fire_ball(50) 的結果",
+            "text": "離開函數（不縮排），用 print 顯示 fire_ball(50) 的結果，測試 50 HP 被扣 25。",
             "code": "print(fire_ball(50))"
           }
         ],
@@ -3871,7 +3919,12 @@ const CHAPTERS = [
               "text": "你的函數真厲害！每按一次按鈕，就會使用一次你寫的咒語。"
             }
           ]
-        }
+        },
+        "hints": [
+          "函數先定義怎樣扣 HP，最後才用傳入值測試。",
+          "fire_ball 的參數叫 hp；return hp 減 25，只有 return 那行縮排。",
+          "函數內的局部骨架：return hp - ___（扣 25）。函數外用 print(fire_ball(50)) 測試。"
+        ]
       },
       {
         "id": "c6m6",
@@ -3954,6 +4007,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "加上 <code>return</code>，函數就會把答案送回來。沒有 return，就只會得到 None！"
           }
+        ],
+        "hints": [
+          "在函數裏算出答案，不等於把答案交回去。",
+          "檢查第 2 行：hp + 20 前面缺少傳回結果的關鍵字。",
+          "把第 2 行改成縮排 4 格的 return hp + 20，再測試 heal(50)。"
         ]
       },
       {
@@ -3980,15 +4038,15 @@ const CHAPTERS = [
         "goal": "跟著計劃寫 3 行咒語：critical() 用兩個參數計算暴擊傷害。",
         "plan": [
           {
-            "text": "定義 (def) 函數 critical，參數是 hp 和 power（用逗號分隔）",
+            "text": "用 def 定義 critical，括號內的參數依次是 hp、power，用逗號分隔，行尾加冒號。",
             "code": "def critical(hp, power):"
           },
           {
-            "text": "（縮排）傳回 hp 減 power 乘 2",
+            "text": "在函數裏用 return 傳回 hp 減去 power 的兩倍；先乘 2 再相減，縮排 4 格。",
             "code": "    return hp - power * 2"
           },
           {
-            "text": "（不用縮排）顯示 critical(50, 10) 的結果",
+            "text": "離開函數（不縮排），用 print 顯示 critical(50, 10) 的結果；這次 hp 是 50、power 是 10。",
             "code": "print(critical(50, 10))"
           }
         ],
@@ -4091,6 +4149,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "50 − 10 × 2 = 30！電腦會先乘後減，和數學課一樣。"
           }
+        ],
+        "hints": [
+          "critical 同時需要目前 HP 與基本攻擊力，所以有兩個參數。",
+          "兩個參數依次叫 hp、power；傷害是 power * 2，要從 hp 扣除。",
+          "傳回值的骨架：return hp - power * ___；兩倍填 2。函數外用 critical(50, 10) 測試。"
         ]
       },
       {
@@ -4123,31 +4186,31 @@ const CHAPTERS = [
         "goal": "跟著計劃寫 7 行咒語：smart_attack() 按敵人 HP 選擇攻擊方式。",
         "plan": [
           {
-            "text": "定義 (def) 函數 smart_attack，參數是 hp",
+            "text": "用 def 定義 smart_attack，參數叫 hp，行尾加冒號。",
             "code": "def smart_attack(hp):"
           },
           {
-            "text": "（縮排 4 格）如果 hp 大於 50",
+            "text": "在函數裏用 if 檢查 hp > 50，行尾加冒號；縮排 4 格。",
             "code": "    if hp > 50:"
           },
           {
-            "text": "（縮排 8 格）傳回 hp 減 30",
+            "text": "如果 hp > 50，return 傳回 hp 減 30 的結果；位於函數和 if 裏，縮排 8 格。",
             "code": "        return hp - 30"
           },
           {
-            "text": "（縮排 4 格）否則 (else)",
+            "text": "用 else 表示 hp 不大於 50；與 if 對齊，縮排 4 格，行尾加冒號。",
             "code": "    else:"
           },
           {
-            "text": "（縮排 8 格）傳回 hp 減 10",
+            "text": "在 else 裏 return 傳回 hp 減 10 的結果；縮排 8 格。",
             "code": "        return hp - 10"
           },
           {
-            "text": "（不用縮排）顯示 smart_attack(80) 的結果",
+            "text": "離開函數（不縮排），用 print 顯示 smart_attack(80) 的結果，測試第一個分支。",
             "code": "print(smart_attack(80))"
           },
           {
-            "text": "（不用縮排）顯示 smart_attack(40) 的結果",
+            "text": "再用 print 顯示 smart_attack(40) 的結果，不要縮排，測試另一個分支。",
             "code": "print(smart_attack(40))"
           }
         ],
@@ -4258,6 +4321,11 @@ const CHAPTERS = [
             "who": "wizard",
             "text": "80 HP 用大招變 50，40 HP 用小招變 30。你的函數懂得思考了！"
           }
+        ],
+        "hints": [
+          "hp > 50 時扣 30；其餘情況扣 10，不能在兩個分支都扣同一個值。",
+          "def 在最左邊；if、else 縮排 4 格；各自的 return 縮排 8 格。",
+          "兩個 return 的計算分別是 hp - 30、hp - 10。最後兩個 print 不縮排，分別傳入 80、40 測試兩條路。"
         ]
       }
     ],
